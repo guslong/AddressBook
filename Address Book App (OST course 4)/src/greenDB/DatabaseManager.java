@@ -50,10 +50,8 @@ public class DatabaseManager {
                     
         try {                   
             // Connect to the database.
-            // Give the whole URL as a parameter rather than using a variable
-        	
-        	//TODO replace this with localhost connection
             conn = DriverManager.getConnection(DBconnection + databaseName, username, password);
+            
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);   // Create a Statement
             // Execute the creation and initialization of table query 
             DatabaseMetaData aboutDB = conn.getMetaData(); 
